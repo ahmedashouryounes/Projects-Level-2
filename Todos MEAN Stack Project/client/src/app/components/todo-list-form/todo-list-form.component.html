@@ -1,0 +1,15 @@
+<div class="container routing py-5">
+    <h1>{{editMode ? 'Update':'Add'}} Todo</h1>
+<div>
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input [(ngModel)]="title" type="text" class="form-control" id="title" placeholder="title">
+      </div>
+      <div class="mb-3">
+        <label for="details" class="form-label">Details</label>
+        <textarea [(ngModel)]="details" class="form-control" id="details" rows="3"></textarea>
+      </div>
+      <button class="d-block ms-auto btn btn-success" (click)="add()">{{editMode ? 'Update':'Add'}}</button>
+</div>
+<a class="text-decoration-none" routerLink="/profile">&lt;-Back</a>
+</div>

@@ -1,0 +1,8 @@
+<div>
+    <!-- [(newTodo)] can use here -->
+    <input  type="text" placeholder="enter value to add" (keyup)="addtotodos(inp)" #inp >
+    <button (click)="add()">add</button>
+</div>
+<ul>
+    <li *ngFor="let todo of todos; index as i" #lix>{{i+1}} : {{todo.title}} <button (click)="delTodo(lix)">Remove</button></li>
+</ul>
